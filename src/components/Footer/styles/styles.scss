@@ -1,0 +1,121 @@
+@import '../../../containers/App/styles/vars';
+@import '../../../containers/App/styles/screens';
+
+:local(.styles) {
+  background: $dark-dark-blue;
+
+  padding: 41px 0;
+
+  span.logo {
+    display: inline-block;
+
+    width: 90px;
+    height: 26px;
+
+    background: url(../files/footer-logo.svg);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+  }
+
+  p.title {
+    font-family: Lato;
+  	font-size: 36px;
+  	font-style: normal;
+  	font-variant: normal;
+  	font-weight: bold;
+  	line-height: 36px;
+    color: #FFF;
+
+    @media (#{ $phone }) {
+      font-size: 22px;
+      line-height: 27px;
+    }
+  }
+
+  p.description {
+    font-family: "Give You Glory";
+    font-size: 30px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: bold;
+    line-height: 30px;
+    // font-family: Lato;
+    // font-size: 24px;
+    // font-style: normal;
+    // font-variant: normal;
+    // font-weight: 400;
+    // line-height: 36px;
+    color: #FFF;
+
+    @media (#{ $phone }) {
+      font-size: 22px;
+      line-height: 27px;
+      }
+    }
+
+  .social {
+    margin: 0 0 20px 0;
+
+    a {
+      display: inline-block;
+
+      margin-right: 20px;
+
+      opacity: .5;
+
+      &:hover {
+        opacity: 1;
+      }
+
+      @mixin icon($url, $width, $height) {
+        width: $width;
+        height: $height;
+
+        background: url(../files/#{ $url }.svg);
+        background-repeat: no-repeat;
+        background-size: $width $height;
+      }
+
+      &.twitter {
+        @include icon('Twitter', 22, 20);
+      }
+
+      &.facebook {
+        @include icon('Facebook', 22, 24);
+      }
+
+      &.instagram {
+        @include icon('Instagram', 22, 24);
+      }
+
+      &.linkedin {
+        @include icon('LinkedIn', 20, 20);
+      }
+
+      &.pinterest {
+        @include icon('Pinterest', 22, 22);
+      }
+
+      &.google {
+        @include icon('GooglePlus', 30, 22);
+      }
+    }
+  }
+
+  p.copyright {
+    color: #FFF;
+    font-family: Lato;
+    font-size: 14px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: bold;
+    line-height: 18px;
+
+    a {
+      color: #FFF;
+      border-bottom: 1px solid #FFF;
+
+      margin-left: 5px;
+    }
+  }
+}
